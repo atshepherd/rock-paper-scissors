@@ -31,4 +31,5 @@ console.log(getHumanChoice());
 
 // Create two variables named humanScore and computerScore
 // Initialize these variables with the value of 0
-
+let humanScore = 0;
+let computerScore = 0;
