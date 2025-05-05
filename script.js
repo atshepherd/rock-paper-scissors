@@ -18,4 +18,8 @@ let randNum = Math.floor((Math.random() * 3) + 1);
 
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice()); for debug
+
+// Create a new function named getHumanChoice
+
+// Take user input, assume correct input
