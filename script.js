@@ -27,9 +27,17 @@ function getHumanChoice() {
 }
 
 // Take user input, assume correct input
-console.log(getHumanChoice());
+// console.log(getHumanChoice()); debug
 
 // Create two variables named humanScore and computerScore
 // Initialize these variables with the value of 0
 let humanScore = 0;
 let computerScore = 0;
+
+// Create a function named playRound, takes parameters humanChoice and computerChoice
+
+// Make humanChoice case-insensitive
+
+// Print an outcome statement
+
+// Increment score based on winner
