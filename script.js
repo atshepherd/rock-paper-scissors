@@ -22,7 +22,10 @@ let randNum = Math.floor((Math.random() * 3) + 1);
 
 // Create a new function named getHumanChoice
 function getHumanChoice() {
-    
+    let choice = prompt("Please enter your choice of Rock, Paper, or Scissors.");
+    return choice;
 }
 
 // Take user input, assume correct input
+console.log(getHumanChoice());
+
