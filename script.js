@@ -71,6 +71,9 @@ else if (humanChoice === "scissors" && computerChoice == "rock") {
 }
 
 // Create a new function named playGame
+function playGame() {
+    
+}
 
 //Move playRound and score variables so they are declared within playGame
 
