@@ -74,11 +74,15 @@ else if (humanChoice === "scissors" && computerChoice == "rock") {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+
+    // Play 5 rounds by calling playRound 5 times
+    for (let i = 0; i < 4; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
     
-    playRound(getHumanChoice(), getComputerChoice());
 }
 
-// Play 5 rounds by calling playRound 5 times
+
 
 // Create two variables named humanScore and computerScore
 // Initialize these variables with the value of 0
