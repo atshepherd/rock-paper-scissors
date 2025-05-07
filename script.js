@@ -23,6 +23,7 @@ let computerChoice = Math.floor((Math.random() * 3) + 1);
 
 // Create a new function named getHumanChoice
 function getHumanChoice() {
+
     // Take user input, assume correct input
     let humanChoice = prompt("Please enter your choice of Rock, Paper, or Scissors.");
     return humanChoice;
@@ -36,8 +37,18 @@ let humanScore = 0;
 let computerScore = 0;
 
 // Create a function named playRound, takes parameters humanChoice and computerChoice
+function playRound(humanChoice, computerChoice) {
 
 // Make humanChoice case-insensitive
+humanChoice = humanChoice.toLowerCase();
+computerChoice = computerChoice.toLowerCase();
+
+// for debug
+console.log(`Human choice is: ${humanChoice}.`);
+console.log(`Computer choice is: ${computerChoice}.`);
+}
+
+playRound(getHumanChoice(), getComputerChoice());
 
 // Print an outcome statement
 
