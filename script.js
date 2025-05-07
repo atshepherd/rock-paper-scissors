@@ -72,17 +72,15 @@ else if (humanChoice === "scissors" && computerChoice == "rock") {
 
 // Create a new function named playGame
 function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
     
+    playRound(getHumanChoice(), getComputerChoice());
 }
-
-//Move playRound and score variables so they are declared within playGame
 
 // Play 5 rounds by calling playRound 5 times
 
 // Create two variables named humanScore and computerScore
 // Initialize these variables with the value of 0
-let humanScore = 0;
-let computerScore = 0;
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`);
+/* console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`); */
