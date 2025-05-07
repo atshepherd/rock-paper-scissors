@@ -41,31 +41,25 @@ if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "p
 //If player chooses rock
 else if (humanChoice === "rock" && computerChoice == "scissors") {
     console.log("You win! Rock beats scissors!");
-    humanScore++;
 }
 else if (humanChoice === "rock" && computerChoice == "paper") {
     console.log("You lose. Paper beats rock.");
-    computerScore++;
 }
 
 //If player chooses paper
 else if (humanChoice === "paper" && computerChoice == "rock") {
     console.log("You win! Paper beats rock.");
-    humanScore++;
 }
 else if (humanChoice === "paper" && computerChoice == "scissors") {
     console.log("You lose. Scissors beats paper.");
-    computerScore++;
 }
 
 //If player chooses scissors
 else if (humanChoice === "scissors" && computerChoice == "paper") {
     console.log("You win! Scissors beats paper.");
-    humanScore++;
 }
 else if (humanChoice === "scissors" && computerChoice == "rock") {
     console.log("You lose. Rock beats scissors");
-    computerScore++;
 }
 
 }
@@ -78,7 +72,7 @@ function playGame() {
     let computerScore = 0;
 
     // Play 5 rounds by calling playRound 5 times
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i <= 4; i++) {
         playRound(getHumanChoice(), getComputerChoice());
     }
     
