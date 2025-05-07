@@ -35,8 +35,13 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
 
 // Make humanChoice case-insensitive
-humanChoice.toLowerCase();
-computerChoice.toLowerCase();
+    humanChoice.toLowerCase();
+    computerChoice.toLowerCase();
+
+// Tie condition
+if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
+    console.log("It's a tie!");
+}
 
 }
 
