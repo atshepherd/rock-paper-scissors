@@ -59,6 +59,14 @@ else if (humanChoice === "paper" && computerChoice == "scissors") {
     console.log("You lose. Scissors beats paper.");
 }
 
+//If player chooses scissors
+else if (humanChoice === "scissors" && computerChoice == "paper") {
+    console.log("You win! Scissors beats paper.");
+}
+else if (humanChoice === "scissors" && computerChoice == "rock") {
+    console.log("You lose. Rock beats scissors");
+}
+
 // Increment score based on winner
 
 }
