@@ -43,6 +43,14 @@ if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "p
     console.log("It's a tie!");
 }
 
+//If player chooses rock
+else if (humanChoice === "rock" && computerChoice == "paper") {
+    console.log("You lose. Paper beats Rock.")
+}
+else if (humanChoice === "rock" && computerChoice == "scissors") {
+    console.log("You lose. Paper beats Rock.")
+}
+
 }
 
 playRound(getHumanChoice(), getComputerChoice());
