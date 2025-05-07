@@ -51,10 +51,9 @@ else if (humanChoice === "rock" && computerChoice == "scissors") {
     console.log("You lose. Paper beats Rock.")
 }
 
+// Increment score based on winner
+
 }
 
 playRound(getHumanChoice(), getComputerChoice());
 
-// Print an outcome statement
-
-// Increment score based on winner
