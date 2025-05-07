@@ -72,6 +72,8 @@ else if (humanChoice === "scissors" && computerChoice == "rock") {
 
 // Create a new function named playGame
 function playGame() {
+    // Create two variables named humanScore and computerScore
+    // Initialize these variables with the value of 0
     let humanScore = 0;
     let computerScore = 0;
 
@@ -82,9 +84,5 @@ function playGame() {
     
 }
 
-
-
-// Create two variables named humanScore and computerScore
-// Initialize these variables with the value of 0
-
+playGame();
 /* console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`); */
