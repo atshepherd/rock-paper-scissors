@@ -44,13 +44,13 @@ if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "p
 }
 
 //If player chooses rock
-else if (humanChoice === "rock" && computerChoice == "paper") {
-    console.log("You lose. Paper beats rock.");
-    computerScore++;
-}
 else if (humanChoice === "rock" && computerChoice == "scissors") {
     console.log("You win! Rock beats scissors!");
     humanScore++;
+}
+else if (humanChoice === "rock" && computerChoice == "paper") {
+    console.log("You lose. Paper beats rock.");
+    computerScore++;
 }
 
 //If player chooses paper
