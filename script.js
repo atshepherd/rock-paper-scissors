@@ -82,8 +82,18 @@ function playGame() {
     // Play 5 rounds by calling playRound 5 times
     for (let i = 0; i <= 4; i++) {
         result = playRound(getHumanChoice(), getComputerChoice());
+
+        switch(result) {
+            case "win":
+                humanScore++;
+                break;
+            case "lose":
+                computerScore++;
+                break;
+            case "tie":
+                break;      
+        }
     }
-    
 }
 
 playGame();
