@@ -36,30 +36,37 @@ function playRound(humanChoice, computerChoice) {
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
     console.log("It's a tie!");
+    return "tie";
 }
 
 //If player chooses rock
 else if (humanChoice === "rock" && computerChoice == "scissors") {
     console.log("You win! Rock beats scissors!");
+    return "win";
 }
 else if (humanChoice === "rock" && computerChoice == "paper") {
     console.log("You lose. Paper beats rock.");
+    return "lose";
 }
 
 //If player chooses paper
 else if (humanChoice === "paper" && computerChoice == "rock") {
     console.log("You win! Paper beats rock.");
+    return "win";
 }
 else if (humanChoice === "paper" && computerChoice == "scissors") {
     console.log("You lose. Scissors beats paper.");
+    return "lose";
 }
 
 //If player chooses scissors
 else if (humanChoice === "scissors" && computerChoice == "paper") {
     console.log("You win! Scissors beats paper.");
+    return "win";
 }
 else if (humanChoice === "scissors" && computerChoice == "rock") {
     console.log("You lose. Rock beats scissors");
+    return "lose";
 }
 
 }
@@ -70,10 +77,11 @@ function playGame() {
     // Initialize these variables with the value of 0
     let humanScore = 0;
     let computerScore = 0;
+    let result = "";
 
     // Play 5 rounds by calling playRound 5 times
     for (let i = 0; i <= 4; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
+        result = playRound(getHumanChoice(), getComputerChoice());
     }
     
 }
