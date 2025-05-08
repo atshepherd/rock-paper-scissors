@@ -94,6 +94,16 @@ function playGame() {
                 break;      
         }
     }
+
+    if (humanScore > computerScore) {
+        console.log(`You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    }
+    else if (computerScore > humanScore) {
+        console.log(`You lose. Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    }
+    else if (humanScore === computerScore) {
+        console.log(`It's a tie! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    }
 }
 
 playGame();
