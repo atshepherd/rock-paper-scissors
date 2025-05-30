@@ -91,23 +91,19 @@ function playGame() {
     // Create a variable to store the result from playRound, initialize to empty string
     let result = "";
 
-    // Play 5 rounds by calling playRound 5 times
-    for (let i = 0; i <= 4; i++) {
+    // Play the round, get both choices, return result
+    result = playRound(getHumanChoice(), getComputerChoice());
 
-        // Play the round, get both choices, return result
-        result = playRound(getHumanChoice(), getComputerChoice());
-
-        // Increment score based on result from playRound
-        switch(result) {
-            case "win":
-                humanScore++;
-                break;
-            case "lose":
-                computerScore++;
-                break;
-            case "tie":
-                break;      
-        }
+    // Increment score based on result from playRound
+    switch(result) {
+        case "win":
+            humanScore++;
+            break;
+        case "lose":
+            computerScore++;
+            break;
+        case "tie":
+            break;      
     }
 
     // Announce a winner and output the score of both players
