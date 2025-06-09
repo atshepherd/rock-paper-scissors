@@ -121,16 +121,22 @@ let rockBtn = document.getElementById("rock");
 let paperBtn = document.getElementById("paper");
 let scissorsBtn = document.getElementById("scissors");
 
-rockBtn.addEventListener("click", (e) => {
-    console.log("Rock Button Works");
+rockBtn.addEventListener("click", () => {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "rock";
+    playRound(playerSelection, computerSelection);
 });
 
 paperBtn.addEventListener("click", () => {
-    console.log("Paper Button Works");
+    let computerSelection = getComputerChoice();
+    let playerSelection = "paper";
+    playRound(playerSelection, computerSelection);
 });
 
 scissorsBtn.addEventListener("click", () => {
-    console.log("Scissors Button Works");
+    let computerSelection = getComputerChoice();
+    let playerSelection = "scissors";
+    playRound(playerSelection, computerSelection);
 });
 
 // calls the function that starts the game
