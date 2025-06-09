@@ -22,9 +22,8 @@ let computerChoice = Math.floor((Math.random() * 3) + 1);
 // Create a new function named getHumanChoice
 function getHumanChoice() {
 
-    // Take user input, assume correct input
-    let humanChoice = prompt("Please enter your choice of Rock, Paper, or Scissors.");
-    return humanChoice;
+    //let humanChoice = prompt("Please enter your choice of Rock, Paper, or Scissors.");
+    //return humanChoice;
 }
 
 // Create a function named playRound, takes parameters humanChoice and computerChoice
@@ -118,5 +117,21 @@ function playGame() {
     }
 }
 
+let rockBtn = document.getElementById("rock");
+let paperBtn = document.getElementById("paper");
+let scissorsBtn = document.getElementById("scissors");
+
+rockBtn.addEventListener("click", (e) => {
+    console.log("Rock Button Works");
+});
+
+paperBtn.addEventListener("click", () => {
+    console.log("Paper Button Works");
+});
+
+scissorsBtn.addEventListener("click", () => {
+    console.log("Scissors Button Works");
+});
+
 // calls the function that starts the game
-playGame();
+//playGame();
