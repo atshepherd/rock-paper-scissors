@@ -1,3 +1,32 @@
 * {
     background-color: black;
+    font: bold 18px "Roboto";
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: white;
+    font-size: px;
+    padding: 5px 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(100, 219, 100);
+    border-color: rgb(58, 133, 58);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
 }
