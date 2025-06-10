@@ -28,13 +28,10 @@ function keepScore(humanScore, computerScore) {
 
 function announceWinner(humanScore, computerScore) {
     if (humanScore > computerScore) {
-    console.log(`You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    console.log(`The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
     }
     else if (computerScore > humanScore) {
-    console.log(`You lose. Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
-    }
-    else if (humanScore === computerScore) {
-    console.log(`It's a tie! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    console.log(`The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
     }
 }
 
@@ -42,38 +39,37 @@ function announceWinner(humanScore, computerScore) {
 function playRound(humanChoice, computerChoice) {
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
-    console.log("It's a tie!");
+    console.log(`It's a tie! The score is ${humanScore} to ${computerScore}.`);
 }
 
 //If player chooses rock
 else if (humanChoice === "rock" && computerChoice == "scissors") {
-    console.log("You win! Rock beats scissors!");
     humanScore++;
-
+    console.log(`You won that round! Rock beats scissors! The score is ${humanScore} to ${computerScore}.`);
 }
 else if (humanChoice === "rock" && computerChoice == "paper") {
-    console.log("You lose. Paper beats rock.");
     computerScore++;
+    console.log(`You lost that round. Paper beats rock. The score is ${humanScore} to ${computerScore}.`);
 }
 
 //If player chooses paper
 else if (humanChoice === "paper" && computerChoice == "rock") {
-    console.log("You win! Paper beats rock.");
     humanScore++;
+    console.log(`You won that round! Paper beats rock. The score is ${humanScore} to ${computerScore}.`);
 }
 else if (humanChoice === "paper" && computerChoice == "scissors") {
-    console.log("You lose. Scissors beats paper.");
     computerScore++;
+    console.log(`You lost that round. Scissors beats paper. The score is ${humanScore} to ${computerScore}.`);
 }
 
 //If player chooses scissors
 else if (humanChoice === "scissors" && computerChoice == "paper") {
-    console.log("You win! Scissors beats paper.");
     humanScore++;
+    console.log(`You won that round! Scissors beats paper. The score is ${humanScore} to ${computerScore}.`);
 }
 else if (humanChoice === "scissors" && computerChoice == "rock") {
-    console.log("You lose. Rock beats scissors");
     computerScore++;
+    console.log(`You lost that round. Rock beats scissors. The score is ${humanScore} to ${computerScore}.`);
 }
 
 }
