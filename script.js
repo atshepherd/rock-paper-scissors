@@ -86,8 +86,15 @@ let computerScore = 0;
 rockBtn.addEventListener("click", () => {
     let computerSelection = getComputerChoice();
     let playerSelection = "rock";
+
     playRound(playerSelection, computerSelection);
     keepScore(humanScore, computerScore);
+
+    if (humanScore >= 5 || computerScore >= 5 ) {
+        humanScore = 0;
+        computerScore = 0;
+        console.log("The score has been reset. Choose an option to play again!");
+    }
 });
 
 paperBtn.addEventListener("click", () => {
@@ -95,6 +102,12 @@ paperBtn.addEventListener("click", () => {
     let playerSelection = "paper";
     playRound(playerSelection, computerSelection);
     keepScore(humanScore, computerScore);
+
+    if (humanScore >= 5 || computerScore >= 5 ) {
+        humanScore = 0;
+        computerScore = 0;
+        console.log("The score has been reset. Choose an option to play again!");
+    }
 });
 
 scissorsBtn.addEventListener("click", () => {
@@ -102,4 +115,10 @@ scissorsBtn.addEventListener("click", () => {
     let playerSelection = "scissors";
     playRound(playerSelection, computerSelection);
     keepScore(humanScore, computerScore);
+
+    if (humanScore >= 5 || computerScore >= 5 ) {
+        humanScore = 0;
+        computerScore = 0;
+        console.log("The score has been reset. Choose an option to play again!");
+    }
 });
