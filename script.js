@@ -27,49 +27,54 @@ function keepScore(humanScore, computerScore) {
 }
 
 function announceWinner(humanScore, computerScore) {
+    let roundWinner = document.querySelector(".winner");
+
     if (humanScore > computerScore) {
-    console.log(`The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    roundWinner.textContent = `The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
     }
     else if (computerScore > humanScore) {
-    console.log(`The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}.`);
+    roundWinner.textContent = `The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
     }
 }
 
 // Create a function named playRound, takes parameters humanChoice and computerChoice
 function playRound(humanChoice, computerChoice) {
+
+let roundResults = document.querySelector(".results");
+
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
-    console.log(`It's a tie! The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `It's a tie! The score is ${humanScore} to ${computerScore}.`;
 }
 
 //If player chooses rock
 else if (humanChoice === "rock" && computerChoice == "scissors") {
     humanScore++;
-    console.log(`You won that round! Rock beats scissors! The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You won that round! Rock beats scissors! The score is ${humanScore} to ${computerScore}.`;
 }
 else if (humanChoice === "rock" && computerChoice == "paper") {
     computerScore++;
-    console.log(`You lost that round. Paper beats rock. The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You lost that round. Paper beats rock. The score is ${humanScore} to ${computerScore}.`;
 }
 
 //If player chooses paper
 else if (humanChoice === "paper" && computerChoice == "rock") {
     humanScore++;
-    console.log(`You won that round! Paper beats rock. The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You won that round! Paper beats rock. The score is ${humanScore} to ${computerScore}.`;
 }
 else if (humanChoice === "paper" && computerChoice == "scissors") {
     computerScore++;
-    console.log(`You lost that round. Scissors beats paper. The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You lost that round. Scissors beats paper. The score is ${humanScore} to ${computerScore}.`;
 }
 
 //If player chooses scissors
 else if (humanChoice === "scissors" && computerChoice == "paper") {
     humanScore++;
-    console.log(`You won that round! Scissors beats paper. The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You won that round! Scissors beats paper. The score is ${humanScore} to ${computerScore}.`;
 }
 else if (humanChoice === "scissors" && computerChoice == "rock") {
     computerScore++;
-    console.log(`You lost that round. Rock beats scissors. The score is ${humanScore} to ${computerScore}.`);
+    roundResults.textContent = `You lost that round. Rock beats scissors. The score is ${humanScore} to ${computerScore}.`;
 }
 
 }
@@ -82,6 +87,7 @@ let scissorsBtn = document.getElementById("scissors");
 // Initialize these variables with the value of 0
 let humanScore = 0;
 let computerScore = 0;
+let roundReset = document.querySelector(".reset");
 
 rockBtn.addEventListener("click", () => {
     let computerSelection = getComputerChoice();
@@ -93,7 +99,7 @@ rockBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        console.log("The score has been reset. Choose an option to play again!");
+        roundReset.textContent = "The score has been reset. Choose an option to play again!";
     }
 });
 
@@ -106,7 +112,7 @@ paperBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        console.log("The score has been reset. Choose an option to play again!");
+        roundReset.textContent = "The score has been reset. Choose an option to play again!";
     }
 });
 
@@ -119,6 +125,6 @@ scissorsBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        console.log("The score has been reset. Choose an option to play again!");
+        roundReset.textContent = "The score has been reset. Choose an option to play again!";
     }
 });

@@ -3,10 +3,11 @@
     font: bold 18px "Roboto";
 }
 
-header {
+header, .results, .winner, .reset {
     color: white;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 button {
