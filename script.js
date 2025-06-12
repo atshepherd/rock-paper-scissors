@@ -27,10 +27,10 @@ function keepScore(humanScore, computerScore) {
 function announceWinner(humanScore, computerScore) {
     let roundWinner = document.querySelector(".winner");
     if (humanScore > computerScore) {
-    roundWinner.textContent = `The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
+    roundWinner.textContent = `🥇 The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}. 🥇`;
     }
     else if (computerScore > humanScore) {
-    roundWinner.textContent = `The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
+    roundWinner.textContent = `❌ The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}. ❌`;
     }
     numTies = 0;
 }
@@ -43,37 +43,37 @@ let roundResults = document.querySelector(".results");
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
     numTies++;
-    roundResults.textContent = `It's a tie! x${numTies}. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `😮 It's a tie! x${numTies}. You both picked ${humanChoice}. The score is ${humanScore} to ${computerScore}. 😮`;
 }
 
 //If player chooses rock
 else if (humanChoice === "rock" && computerChoice == "scissors") {
     humanScore++;
-    roundResults.textContent = `You won that round! Rock beats scissors! The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `🎉 You won that round! Rock beats scissors! The score is ${humanScore} to ${computerScore}. 🎉`;
 }
 else if (humanChoice === "rock" && computerChoice == "paper") {
     computerScore++;
-    roundResults.textContent = `You lost that round. Paper beats rock. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `😔 You lost that round. Paper beats rock. The score is ${humanScore} to ${computerScore}. 😔`;
 }
 
 //If player chooses paper
 else if (humanChoice === "paper" && computerChoice == "rock") {
     humanScore++;
-    roundResults.textContent = `You won that round! Paper beats rock. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `🎉 You won that round! Paper beats rock. The score is ${humanScore} to ${computerScore}. 🎉`;
 }
 else if (humanChoice === "paper" && computerChoice == "scissors") {
     computerScore++;
-    roundResults.textContent = `You lost that round. Scissors beats paper. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `😔 You lost that round. Scissors beats paper. The score is ${humanScore} to ${computerScore}. 😔`;
 }
 
 //If player chooses scissors
 else if (humanChoice === "scissors" && computerChoice == "paper") {
     humanScore++;
-    roundResults.textContent = `You won that round! Scissors beats paper. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `🎉 You won that round! Scissors beats paper. The score is ${humanScore} to ${computerScore}. 🎉`;
 }
 else if (humanChoice === "scissors" && computerChoice == "rock") {
     computerScore++;
-    roundResults.textContent = `You lost that round. Rock beats scissors. The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `😔 You lost that round. Rock beats scissors. The score is ${humanScore} to ${computerScore}. 😔`;
 }
 
 }
@@ -105,7 +105,7 @@ rockBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        roundReset.textContent = "The score has been reset. Choose an option to play again!";
+        roundReset.textContent = "🙂 The score has been reset. Choose an option to play again! 🙂";
     }
 });
 
@@ -124,7 +124,7 @@ paperBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        roundReset.textContent = "The score has been reset. Choose an option to play again!";
+        roundReset.textContent = "🙂 The score has been reset. Choose an option to play again! 🙂";
     }
 });
 
@@ -143,6 +143,6 @@ scissorsBtn.addEventListener("click", () => {
     if (humanScore >= 5 || computerScore >= 5 ) {
         humanScore = 0;
         computerScore = 0;
-        roundReset.textContent = "The score has been reset. Choose an option to play again!";
+        roundReset.textContent = "🙂 The score has been reset. Choose an option to play again! 🙂";
     }
 });
