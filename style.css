@@ -1,3 +1,39 @@
 * {
     background-color: black;
+    font: bold 18px "Roboto";
+}
+
+header, .results, .winner, .reset {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: white;
+    font-size: px;
+    padding: 5px 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-shadow:     
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+button:hover {
+    background-color: rgb(100, 219, 100);
+    border-color: rgb(58, 133, 58);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
 }
