@@ -1,6 +1,5 @@
 // Create a new function named getComputerChoice
 function getComputerChoice() {
-
 // Return a random value of rock, paper, or scissors (1, 2, or 3)
 let computerChoice = Math.floor((Math.random() * 3) + 1);
 
@@ -16,7 +15,6 @@ let computerChoice = Math.floor((Math.random() * 3) + 1);
             return "scissors";
             break;
     }
-
 }
 
 function keepScore(humanScore, computerScore) {
@@ -28,13 +26,13 @@ function keepScore(humanScore, computerScore) {
 
 function announceWinner(humanScore, computerScore) {
     let roundWinner = document.querySelector(".winner");
-
     if (humanScore > computerScore) {
     roundWinner.textContent = `The results are in. You win! Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
     }
     else if (computerScore > humanScore) {
     roundWinner.textContent = `The results are in. You lost. Your score was ${humanScore}, and the computer's score was ${computerScore}.`;
     }
+    numTies = 0;
 }
 
 // Create a function named playRound, takes parameters humanChoice and computerChoice
@@ -44,7 +42,8 @@ let roundResults = document.querySelector(".results");
 
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
-    roundResults.textContent = `It's a tie! The score is ${humanScore} to ${computerScore}.`;
+    roundResults.textContent = `It's a tie! x${numTies}. The score is ${humanScore} to ${computerScore}.`;
+    numTies++;
 }
 
 //If player chooses rock
@@ -87,9 +86,16 @@ let scissorsBtn = document.getElementById("scissors");
 // Initialize these variables with the value of 0
 let humanScore = 0;
 let computerScore = 0;
+let numTies = 1;
 let roundReset = document.querySelector(".reset");
 
 rockBtn.addEventListener("click", () => {
+
+    if (roundReset.textContent != "") {
+        document.querySelector(".winner").textContent = "";
+        roundReset.textContent = "";
+    }
+
     let computerSelection = getComputerChoice();
     let playerSelection = "rock";
 
@@ -104,6 +110,12 @@ rockBtn.addEventListener("click", () => {
 });
 
 paperBtn.addEventListener("click", () => {
+    
+    if (roundReset.textContent != "") {
+        document.querySelector(".winner").textContent = "";
+        roundReset.textContent = "";
+    }
+    
     let computerSelection = getComputerChoice();
     let playerSelection = "paper";
     playRound(playerSelection, computerSelection);
@@ -117,6 +129,12 @@ paperBtn.addEventListener("click", () => {
 });
 
 scissorsBtn.addEventListener("click", () => {
+
+    if (roundReset.textContent != "") {
+        document.querySelector(".winner").textContent = "";
+        roundReset.textContent = "";
+    }
+
     let computerSelection = getComputerChoice();
     let playerSelection = "scissors";
     playRound(playerSelection, computerSelection);
