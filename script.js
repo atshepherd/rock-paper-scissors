@@ -42,8 +42,8 @@ let roundResults = document.querySelector(".results");
 
 // Tie condition
 if ( (humanChoice === "rock" && computerChoice == "rock") || (humanChoice === "paper" && computerChoice == "paper") || (humanChoice === "scissors" && computerChoice == "scissors")) {
-    roundResults.textContent = `It's a tie! x${numTies}. The score is ${humanScore} to ${computerScore}.`;
     numTies++;
+    roundResults.textContent = `It's a tie! x${numTies}. The score is ${humanScore} to ${computerScore}.`;
 }
 
 //If player chooses rock
@@ -86,7 +86,7 @@ let scissorsBtn = document.getElementById("scissors");
 // Initialize these variables with the value of 0
 let humanScore = 0;
 let computerScore = 0;
-let numTies = 1;
+let numTies = 0;
 let roundReset = document.querySelector(".reset");
 
 rockBtn.addEventListener("click", () => {
